@@ -24,12 +24,12 @@ function bx_charts_get_json($sObject, $sFrom, $sTo)
 {
     $aObject = $GLOBALS['MySQL']->getRow("SELECT * FROM `sys_objects_charts` WHERE `object` = ? AND `active` = ?", [$sObject, 1]);
     if (!$aObject)
-        return json_encode(array('error' => _t('_Error Occured')));
+        return json_encode(array('error' => _t('_Error Occurred')));
 
     $iFrom = bx_charts_get_ts($sFrom);
     $iTo = bx_charts_get_ts($sTo, true);
     if (!$iFrom || !$iTo)
-        return json_encode(array('error' => _t('_Error Occured')));
+        return json_encode(array('error' => _t('_Error Occurred')));
 
     $aData = bx_charts_get_data($aObject, $iFrom, $iTo);
     if (!$aData)

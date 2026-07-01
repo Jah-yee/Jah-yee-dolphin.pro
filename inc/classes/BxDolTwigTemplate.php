@@ -116,11 +116,11 @@ class BxDolTwigTemplate extends BxDolModuleTemplate
         $this->pageCode (_t('_Empty'), true, false);
     }
 
-    function displayErrorOccured ()
+    function displayErrorOccurred ()
     {
         $this->pageStart();
-        echo MsgBox(_t('_Error Occured'));
-        $this->pageCode (_t('_Error Occured'), true, false);
+        echo MsgBox(_t('_Error Occurred'));
+        $this->pageCode (_t('_Error Occurred'), true, false);
     }
 
     function displayPageNotFound ()
